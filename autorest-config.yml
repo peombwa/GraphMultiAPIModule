@@ -1,0 +1,80 @@
+# Microsoft Graph PowerShell AutoRest Configuration
+powershell: true
+version: latest
+use: "@autorest/powershell@latest"
+module-version: 0.1.0
+subject-prefix: ""
+license-header: © Microsoft Corporation. All rights reserved.
+azure: true
+module-name: MSGraph
+namespace: Microsoft.Graph.PowerShell
+output-folder: .\src\
+clear-output-folder: true
+use-internal-constructors: true
+use-datetimeoffset : true
+sanitize-names: true
+tag: all-api-versions
+enable-multi-api: true
+profiles:
+  beta:
+  - activitystatistics
+  - users
+  v1.0:
+  - activitystatistics
+  - users
+input-file:
+- Beta.yml
+- v1.0.yml
+metadata:
+  authors: Microsoft
+  description: Microsoft Graph PowerShell module
+  companyName: Microsoft
+  owners: Microsoft
+  requireLicenseAcceptance: true
+  copyright: © Microsoft Corporation. All rights reserved.
+  licenseUri: https://aka.ms/devservicesagreement
+  projectUri: https://github.com/microsoftgraph/msgraph-sdk-powershell
+  iconUri: https://raw.githubusercontent.com/microsoftgraph/g-raph/master/g-raph.png
+  tags: Microsoft;Office365;Graph;PowerShell;GraphServiceClient;Outlook;OneDrive;AzureAD;GraphAPI;Productivity;SharePoint;Intune;SDK;
+directive:
+  - no-inline: # tells it not to inline the model with that name 
+    - microsoft.graph.sharepointIds
+    - microsoft.graph.identitySet
+    - microsoft.graph.itemReference
+    - microsoft.graph.directoryObject
+    - microsoft.graph.user
+    - microsoft.graph.drive
+    - microsoft.graph.listItem
+    - microsoft.graph.post
+    - microsoft.graph.sectionGroup
+    - microsoft.graph.team
+  - where:
+      model-name: MicrosoftGraphUser
+    set:
+      format-table:
+        properties:
+          - Id
+          - DisplayName
+          - Mail
+          - UserPrincipalName
+          - UserType
+  - where:
+      model-name: MicrosoftGraphPerson
+    set:
+      format-table:
+        properties:
+          - Id
+          - DisplayName
+          - MailboxType
+          - PersonType
+          - IsFavorite
+  - where:
+      model-name: MicrosoftGraphContact
+    set:
+      format-table:
+        properties:
+          - Id
+          - DisplayName
+          - EmailAddresses
+          - Phones
+          - CreatedDateTime
