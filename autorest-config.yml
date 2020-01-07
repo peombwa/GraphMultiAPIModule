@@ -15,16 +15,15 @@ use-datetimeoffset : true
 sanitize-names: true
 tag: all-api-versions
 enable-multi-api: true
+# profile:
+#  - beta
+#  - v1.0
 profiles:
-  beta:
-  - activitystatistics
-  - users
-  v1.0:
-  - activitystatistics
-  - users
+ - beta: '*'
+ - v1.0: '*'
 input-file:
-- Beta.yml
-- v1.0.yml
+ - OpenAPIDocs\beta\Analytics.yml
+ - OpenAPIDocs\v1.0\Analytics.yml
 metadata:
   authors: Microsoft
   description: Microsoft Graph PowerShell module

@@ -13,6 +13,7 @@ paths:
       summary: Get entities from activitystatistics
       operationId: activitystatistics.activityStatistics_ListActivityStatistics
       parameters:
+        - $ref: '#/components/parameters/apiVersionParameter'
         - $ref: '#/components/parameters/top'
         - $ref: '#/components/parameters/skip'
         - $ref: '#/components/parameters/search'
@@ -88,6 +89,8 @@ paths:
         - activitystatistics.activityStatistics
       summary: Add new entity to activitystatistics
       operationId: activitystatistics.activityStatistics_CreateActivityStatistics
+      parameters:
+        - $ref: '#/components/parameters/apiVersionParameter'
       requestBody:
         description: New entity
         content:
@@ -112,6 +115,7 @@ paths:
       summary: Get entity from activitystatistics by key
       operationId: activitystatistics.activityStatistics_GetActivityStatistics
       parameters:
+        - $ref: '#/components/parameters/apiVersionParameter'
         - name: activityStatistics-id
           in: path
           description: 'key: activityStatistics-id of activityStatistics'
@@ -162,6 +166,7 @@ paths:
       summary: Update entity in activitystatistics
       operationId: activitystatistics.activityStatistics_UpdateActivityStatistics
       parameters:
+        - $ref: '#/components/parameters/apiVersionParameter'
         - name: activityStatistics-id
           in: path
           description: 'key: activityStatistics-id of activityStatistics'
@@ -188,6 +193,7 @@ paths:
       summary: Delete entity from activitystatistics
       operationId: activitystatistics.activityStatistics_DeleteActivityStatistics
       parameters:
+        - $ref: '#/components/parameters/apiVersionParameter'
         - name: activityStatistics-id
           in: path
           description: 'key: activityStatistics-id of activityStatistics'
@@ -213,6 +219,7 @@ paths:
       summary: Get analytics from users
       operationId: users_GetAnalytics
       parameters:
+        - $ref: '#/components/parameters/apiVersionParameter'
         - name: user-id
           in: path
           description: 'key: user-id of user'
@@ -261,6 +268,7 @@ paths:
       summary: Update the navigation property analytics in users
       operationId: users_UpdateAnalytics
       parameters:
+        - $ref: '#/components/parameters/apiVersionParameter'
         - name: user-id
           in: path
           description: 'key: user-id of user'
@@ -288,6 +296,7 @@ paths:
       summary: Get activityStatistics from users
       operationId: users.analytics_ListActivityStatistics
       parameters:
+        - $ref: '#/components/parameters/apiVersionParameter'
         - name: user-id
           in: path
           description: 'key: user-id of user'
@@ -371,6 +380,7 @@ paths:
       summary: Create new navigation property to activityStatistics for users
       operationId: users.analytics_CreateActivityStatistics
       parameters:
+        - $ref: '#/components/parameters/apiVersionParameter'
         - name: user-id
           in: path
           description: 'key: user-id of user'
@@ -402,6 +412,7 @@ paths:
       summary: Get activityStatistics from users
       operationId: users.analytics_GetActivityStatistics
       parameters:
+        - $ref: '#/components/parameters/apiVersionParameter'
         - name: user-id
           in: path
           description: 'key: user-id of user'
@@ -459,6 +470,7 @@ paths:
       summary: Update the navigation property activityStatistics in users
       operationId: users.analytics_UpdateActivityStatistics
       parameters:
+        - $ref: '#/components/parameters/apiVersionParameter'
         - name: user-id
           in: path
           description: 'key: user-id of user'
@@ -493,6 +505,7 @@ paths:
       summary: Get insights from users
       operationId: users_GetInsights
       parameters:
+        - $ref: '#/components/parameters/apiVersionParameter'
         - name: user-id
           in: path
           description: 'key: user-id of user'
@@ -544,6 +557,7 @@ paths:
       summary: Update the navigation property insights in users
       operationId: users_UpdateInsights
       parameters:
+        - $ref: '#/components/parameters/apiVersionParameter'
         - name: user-id
           in: path
           description: 'key: user-id of user'
@@ -571,6 +585,7 @@ paths:
       summary: Get shared from users
       operationId: users.insights_ListShared
       parameters:
+        - $ref: '#/components/parameters/apiVersionParameter'
         - name: user-id
           in: path
           description: 'key: user-id of user'
@@ -655,6 +670,7 @@ paths:
       summary: Create new navigation property to shared for users
       operationId: users.insights_CreateShared
       parameters:
+        - $ref: '#/components/parameters/apiVersionParameter'
         - name: user-id
           in: path
           description: 'key: user-id of user'
@@ -686,6 +702,7 @@ paths:
       summary: Get shared from users
       operationId: users.insights_GetShared
       parameters:
+        - $ref: '#/components/parameters/apiVersionParameter'
         - name: user-id
           in: path
           description: 'key: user-id of user'
@@ -746,6 +763,7 @@ paths:
       summary: Update the navigation property shared in users
       operationId: users.insights_UpdateShared
       parameters:
+        - $ref: '#/components/parameters/apiVersionParameter'
         - name: user-id
           in: path
           description: 'key: user-id of user'
@@ -780,6 +798,7 @@ paths:
       summary: Get lastSharedMethod from users
       operationId: users.insights.shared_GetLastSharedMethod
       parameters:
+        - $ref: '#/components/parameters/apiVersionParameter'
         - name: user-id
           in: path
           description: 'key: user-id of user'
@@ -833,6 +852,7 @@ paths:
       summary: Get resource from users
       operationId: users.insights.shared_GetResource
       parameters:
+        - $ref: '#/components/parameters/apiVersionParameter'
         - name: user-id
           in: path
           description: 'key: user-id of user'
@@ -886,6 +906,7 @@ paths:
       summary: Get trending from users
       operationId: users.insights_ListTrending
       parameters:
+        - $ref: '#/components/parameters/apiVersionParameter'
         - name: user-id
           in: path
           description: 'key: user-id of user'
@@ -968,6 +989,7 @@ paths:
       summary: Create new navigation property to trending for users
       operationId: users.insights_CreateTrending
       parameters:
+        - $ref: '#/components/parameters/apiVersionParameter'
         - name: user-id
           in: path
           description: 'key: user-id of user'
@@ -999,6 +1021,7 @@ paths:
       summary: Get trending from users
       operationId: users.insights_GetTrending
       parameters:
+        - $ref: '#/components/parameters/apiVersionParameter'
         - name: user-id
           in: path
           description: 'key: user-id of user'
@@ -1057,6 +1080,7 @@ paths:
       summary: Update the navigation property trending in users
       operationId: users.insights_UpdateTrending
       parameters:
+        - $ref: '#/components/parameters/apiVersionParameter'
         - name: user-id
           in: path
           description: 'key: user-id of user'
@@ -1091,6 +1115,7 @@ paths:
       summary: Get resource from users
       operationId: users.insights.trending_GetResource
       parameters:
+        - $ref: '#/components/parameters/apiVersionParameter'
         - name: user-id
           in: path
           description: 'key: user-id of user'
@@ -1144,6 +1169,7 @@ paths:
       summary: Get used from users
       operationId: users.insights_ListUsed
       parameters:
+        - $ref: '#/components/parameters/apiVersionParameter'
         - name: user-id
           in: path
           description: 'key: user-id of user'
@@ -1223,6 +1249,7 @@ paths:
       summary: Create new navigation property to used for users
       operationId: users.insights_CreateUsed
       parameters:
+        - $ref: '#/components/parameters/apiVersionParameter'
         - name: user-id
           in: path
           description: 'key: user-id of user'
@@ -1254,6 +1281,7 @@ paths:
       summary: Get used from users
       operationId: users.insights_GetUsed
       parameters:
+        - $ref: '#/components/parameters/apiVersionParameter'
         - name: user-id
           in: path
           description: 'key: user-id of user'
@@ -1311,6 +1339,7 @@ paths:
       summary: Update the navigation property used in users
       operationId: users.insights_UpdateUsed
       parameters:
+        - $ref: '#/components/parameters/apiVersionParameter'
         - name: user-id
           in: path
           description: 'key: user-id of user'
@@ -1345,6 +1374,7 @@ paths:
       summary: Get resource from users
       operationId: users.insights.used_GetResource
       parameters:
+        - $ref: '#/components/parameters/apiVersionParameter'
         - name: user-id
           in: path
           description: 'key: user-id of user'
@@ -1748,6 +1778,13 @@ components:
           schema:
             $ref: '#/components/schemas/odata.error'
   parameters:
+    apiVersionParameter:
+      name: api-version
+      in: query
+      description: Clien API version
+      required: true
+      schema:
+        type: string
     top:
       name: $top
       in: query
